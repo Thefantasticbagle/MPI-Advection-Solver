@@ -1,8 +1,8 @@
 /**
- * An OpenMP solver for the Advection Problem.
- * https://en.wikipedia.org/wiki/Advection
+ * An solver for the Diffusion Problem using MPI.
+ * https://en.wikipedia.org/wiki/Diffusion_equation
  * 
- * @file advection_solver.c
+ * @file diffusion_solver.c
  * @author Lars L Ruud
 */
 
@@ -248,7 +248,7 @@ create_datatypes ( )
 
 
 /**
- * Calculates a step of the differential/advection equation.
+ * Calculates a step of the differential equation.
 */
 void
 time_step ( void )
