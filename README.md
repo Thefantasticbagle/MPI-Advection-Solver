@@ -68,7 +68,7 @@ $ make diffusion_solver
 Compiles the program. To delete it, use `make clean`.
 
 ```sh
-$ ./diffusion_solver
+$ mpirun -np 4 ./diffusion_solver
 ```
 Runs the program with default arguments.
 
@@ -78,10 +78,11 @@ $ make video
 Creates `plots` for the previous run and a `video` animation of them, which is located at `./video/animation.mp4` by default.
 
 ## Options
-`./diffusion_solver -y [y_size] -x [x_size] -i [iterations] -s [snapshot_freq]`
+`mpirun -np [number_processes] ./diffusion_solver -y [y_size] -x [x_size] -i [iterations] -s [snapshot_freq]`
 Option | Description | Restrictions | Default value
 :------------ | :------------ | :------------ | :------------
 **-y** | Height in pixels | > 0 | 256
 **-x** | Width in pixels | > 0 | 256
 **-i** | Number of iterations | > 0 | 100000
 **-s** | Number of iterations between each snapshot | > 0 | 1000
+**-np**| MPI number of processes | > 0 | 4
